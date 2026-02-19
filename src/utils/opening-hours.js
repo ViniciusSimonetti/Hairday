@@ -13,3 +13,6 @@ export const openingHours = [
     "20:00",
     "21:00",
 ]
+// Isso e uma simulacao de API que retorna os horarios de atendimento do salão qualquer mudanca
+// Que sera feita aqui ja ira aparecer no site 
+// Isso e util para quando for implementar a API de verdade, pois ja teremos o formato dos dados e a logica pronta para receber os dados da API real
