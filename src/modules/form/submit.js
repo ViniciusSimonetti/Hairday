@@ -1,5 +1,7 @@
 import dayjs from "dayjs" 
 
+import { scheduleNew} from "../../services/schedule-new.js"
+
 const form = document.querySelector('form');
 const clientName = document.getElementById('client');
 const selectDate = document.getElementById('date');
@@ -13,7 +15,7 @@ selectDate.value = inputToday;
 selectDate.min = inputToday;
 
 
-form.addEventListener('submit', (event) => {
+form.onsubmit = async (event) => {
   event.preventDefault();
 
   try {
@@ -41,7 +43,7 @@ form.addEventListener('submit', (event) => {
     //Gera um ID aleatório para o agendamento
     const id = new Date().getTime();
 
-    console.log({
+    await scheduleNew({
       id,
       name,
       when: when.format('DD/MM/YYYY HH:mm')
@@ -53,4 +55,4 @@ form.addEventListener('submit', (event) => {
   }
 
 
-})
+}
