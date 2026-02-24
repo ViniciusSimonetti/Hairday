@@ -46,7 +46,7 @@ form.onsubmit = async (event) => {
     await scheduleNew({
       id,
       name,
-      when: when.format('DD/MM/YYYY HH:mm')
+      when 
     })
 
   } catch (error) {
